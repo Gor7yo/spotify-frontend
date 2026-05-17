@@ -14,6 +14,7 @@
   justify-content: center;
   width: 100%;
   border-bottom: 1px solid #d9dadc;
+  padding: 8px;
 }
 
 .logo {
@@ -23,6 +24,7 @@
 .SignIn__main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   gap: 10px;
 }
@@ -36,6 +38,7 @@
   text-align: center;
   position: relative;
   margin-bottom: 10px;
+  width: 450px;
 
   &::after {
     content: "or";
@@ -101,6 +104,8 @@
   border-bottom: 2px solid #d9dadc;
   padding-bottom: 22px;
   margin-bottom: 32px;
+  align-items: center;
+  width: 450px;
 }
 
 .form__span {
@@ -163,6 +168,7 @@
   justify-content: space-between;
   align-items: center;
   height: 48px;
+  width: 100%;
 }
 
 .form__error {
@@ -231,6 +237,7 @@
   flex-direction: column;
   align-items: center;
   gap: 22px;
+  width: 450px;
 }
 
 .signUp__span {
@@ -250,6 +257,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 12px 0;
 }
 
 @media screen and (max-width: 1368px) {
@@ -262,12 +270,9 @@
   }
 
   .SignIn__form {
-    width: 100%;
-    align-items: center;
-  }
-
-  .form__input {
     width: 90%;
+    align-items: center;
+    margin-bottom: 0;
   }
 
   .form__logIn {
@@ -292,11 +297,49 @@
   }
 
   .SignIn__signUp {
-    margin-bottom: 48px;
+    width: 90%;
   }
 
   .signUp_btn { 
+    width: 100%;
+    padding: 12px 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .SignIn__fastSignIn {
+    width: 100%;
+
+  }
+
+  .SignIn__form {
     width: 90%;
+    align-items: center;
+  }
+
+  .form__logIn {
+    width: 100%;
+  }
+
+  .checkbox {
+    width: 24px;
+    height: 24px;
+  }
+
+  .checkbox__span {
+    font-size: 16px;
+  }
+
+  .checkbox__check {
+    font-size: 20px;
+  }
+
+  .logIn__btn {
+    width: 50%;
+  }
+
+  .signUp_btn { 
+    width: 100%;
     padding: 12px 0;
   }
 }
