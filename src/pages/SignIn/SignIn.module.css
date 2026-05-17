@@ -1,0 +1,169 @@
+.SignIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 30px;
+}
+
+.SignIn__header {
+  display: flex;
+  height: 92px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid #d9dadc;
+}
+
+.logo {
+  height: 44px;
+}
+
+.SignIn__main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.SignIn__fastSignIn {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin-bottom: 10px;
+
+  &::after {
+    content: "or";
+    text-transform: uppercase;
+    width: 58px;
+    z-index: 5;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #d9dadc;
+    bottom: 9px;
+    z-index: -1;
+  }
+}
+
+.fastSignIn__btn {
+  width: 450px;
+  height: 48px;
+  padding: 12px 0;
+  color: #ffffff;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.fastSignIn__facebook {
+  background-color: #1877f2;
+}
+
+.fackebookIcon {
+  font-size: 24px;
+}
+
+.fastSignIn__apple {
+  background-color: var(--primary-bg-color-black);
+}
+
+.appleIcon {
+  font-size: 24px;
+}
+
+.fastSignIn__google {
+  border: 1px solid #878787;
+  color: #6a6a6a;
+}
+
+.SignIn__form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form__span {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.form__input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+
+  input {
+    height: 48px;
+    padding: 13px 14px;
+    background-color: #fff;
+    border: 1px solid #6a6a6a;
+    font-size: 0.935rem;
+    border-radius: 4px;
+  }
+}
+
+.form__email {
+	margin-bottom: 8px;
+}
+
+.form__password  {
+	position: relative;
+	margin-bottom: 8px;
+}
+
+.passwordVisibility {
+	position: absolute;
+	right: 10px;
+	cursor: pointer;
+	font-size: 18px;
+	top: 41px;
+}
+
+.form__forgotPassword {
+	color: #000;
+	text-decoration: underline;
+	margin-bottom: 18px;
+}
+
+.form__logIn {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 48px;
+}
+
+.logIn__checkbox {
+	
+}
+
+.checkbox {
+	width: 16px;
+	height: 16px;
+}
+
+.checkbox__span {
+
+}
+
+.logIn__btn {
+
+}

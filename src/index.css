@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Spotify Mix", sans-serif;
+}
+
+:root {
+  --primary-bg-color: #1e1e1e;
+  --primary-bg-color-black: #000000;
+  --bg-color-dark: #121212;
+  --bg-color-white: #ffffff;
+  --primary-spotify-green: #1ed760;
+  --bg-color-dark-gray: #282828;
+
+  --primaty-gray-text: #757575;
+  --light-gray-text: #a7a7a7;
+  --over-light-text: #b3b3b3;
+}
+
+a,
+button {
+  text-decoration: none;
+  color: white;
+  text-transform: none;
+}
