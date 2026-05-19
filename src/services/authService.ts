@@ -3,6 +3,7 @@ import { apiClient } from "../api/axiosInstance";
 interface LoginCredentials {
   email: string;
   password: string;
+  username: string;
 }
 
 interface AuthResponse {
@@ -33,9 +34,7 @@ export const authService = {
     return data;
   },
 
-  register: async (
-    userData: LoginCredentials & { name?: string },
-  ): Promise<AuthResponse> => {
+  register: async (userData: LoginCredentials): Promise<AuthResponse> => {
     const { data } = await apiClient.post<AuthResponse>(
       "/auth/sign-up",
       userData,

@@ -1,0 +1,349 @@
+.SignUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 30px;
+}
+
+.SignUp__header {
+  display: flex;
+  height: 92px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid #d9dadc;
+  padding: 8px;
+}
+
+.logo {
+  height: 44px;
+}
+
+.SignUp__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.SignUp__fastSignIn {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin-bottom: 10px;
+  width: 450px;
+
+  &::after {
+    content: "or";
+    text-transform: uppercase;
+    width: 58px;
+    z-index: 5;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #d9dadc;
+    bottom: 9px;
+    z-index: -1;
+  }
+}
+
+.fastSignIn__btn {
+  width: 450px;
+  height: 48px;
+  padding: 12px 0;
+  color: #ffffff;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.fastSignIn__facebook {
+  background-color: #1877f2;
+}
+
+.fackebookIcon {
+  font-size: 24px;
+}
+
+.fastSignIn__apple {
+  background-color: var(--primary-bg-color-black);
+}
+
+.appleIcon {
+  font-size: 24px;
+}
+
+.fastSignIn__google {
+  border: 1px solid #878787;
+  color: #6a6a6a;
+}
+
+.SignUp__form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-bottom: 2px solid #d9dadc;
+  padding-bottom: 22px;
+  margin-bottom: 32px;
+  align-items: center;
+  width: 450px;
+}
+
+.form__span {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.form__input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  transition: .2s ease;
+
+  input {
+    height: 48px;
+    padding: 13px 14px;
+    background-color: #fff;
+    border: 1px solid #6A6A6A;
+    font-size: 0.935rem;
+    border-radius: 4px;
+
+    &:active {
+      border: 1px solid #000;
+    }
+  }
+}
+
+.form__email {
+  margin-bottom: 8px;
+}
+
+.form__username {
+	margin-bottom: 8px;
+}
+
+.form__password {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.passwordVisibility {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+  top: 41px;
+}
+
+.slashEye {
+  font-size: 17.8px;
+}
+
+.form__forgotPassword {
+  color: #000;
+  text-decoration: underline;
+  margin-bottom: 18px;
+}
+
+.form__logIn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+}
+
+.form__error {
+  color: #b42e2e;
+}
+
+.logIn__checkbox {
+  font-size: 13px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkbox {
+  width: 17px;
+  height: 17px;
+  appearance: none;
+  border: 1px solid #6a6a6a;
+  border-radius: 3px;
+}
+
+.checkbox__label {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.1s ease;
+}
+
+.checkbox__check {
+  opacity: 1;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  color: white;
+}
+
+.checkbox:checked ~ .checkbox__label {
+  opacity: 1;
+}
+
+.checkbox:checked {
+  background-color: var(--primary-spotify-green);
+}
+
+.checkbox__span {
+  cursor: pointer;
+  user-select: none;
+}
+
+.logIn__btn {
+  height: 100%;
+  background-color: var(--primary-spotify-green);
+  padding: 15px 33px;
+  border-radius: 24px;
+  font-size: 14px;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.SignUp__signIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  width: 450px;
+}
+
+.signUp__span {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.signUp_btn {
+  font-size: 13px;
+  color: #6A6A6A;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  width: 100%;
+  border: 1px solid #878787;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+@media screen and (max-width: 1368px) {
+  .SignUp__header {
+    padding: 8px;
+  }
+
+  .fastSignIn__btn {
+    width: 90%;
+  }
+
+  .SignUp__form {
+    width: 90%;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .form__logIn {
+    width: 90%;
+  }
+
+  .checkbox {
+    width: 24px;
+    height: 24px;
+  }
+
+  .checkbox__span {
+    font-size: 15px;
+  }
+
+  .checkbox__check {
+    font-size: 20px;
+  }
+
+  .logIn__btn {
+    width: 50%;
+  }
+
+  .SignUp__signIn {
+    width: 90%;
+  }
+
+  .signUp_btn { 
+    width: 100%;
+    padding: 12px 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .SignUp__fastSignIn {
+    width: 100%;
+
+  }
+
+  .SignUp__form {
+    width: 90%;
+    align-items: center;
+  }
+
+  .form__logIn {
+    width: 100%;
+  }
+
+  .checkbox {
+    width: 24px;
+    height: 24px;
+  }
+
+  .checkbox__span {
+    font-size: 16px;
+  }
+
+  .checkbox__check {
+    font-size: 20px;
+  }
+
+  .logIn__btn {
+    width: 50%;
+  }
+
+  .signUp_btn { 
+    width: 100%;
+    padding: 12px 0;
+  }
+}

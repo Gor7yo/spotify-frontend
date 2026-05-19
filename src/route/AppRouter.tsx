@@ -1,16 +1,16 @@
-// AppRouter.tsx
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 import { Home } from "../pages/Home/Home";
 import { SignUp } from "../pages/SignUp/SignUp";
 import { SignIn } from "../pages/SignIn/SignIn";
 import { useAuthStore } from "../store/authStore";
-import type { JSX } from "react";
+import { useEffect, type JSX } from "react";
+import { Search } from "../pages/Search/Search";
 
 const routes = [
   {
     path: "/",
     element: <Home />,
-    isPrivate: false,
+    isPrivate: true,
     title: "Home",
     name: "home",
   },
@@ -37,9 +37,22 @@ const routes = [
     title: "Profile",
     name: "profile",
   },
+  {
+    path: "/search",
+    element: <Search />,
+    isPrivate: true,
+    title: "Search",
+    name: "search",
+  },
+  {
+    path: "*",
+    element: <div>Not Found 404</div>,
+    isPrivate: false,
+    title: "Not found 404",
+    name: "notFound",
+  },
 ];
 
-// Компонент для защиты приватных маршрутов
 const PrivateRoute = ({ children }: { children: JSX.Element }) => {
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
 
@@ -50,7 +63,6 @@ const PrivateRoute = ({ children }: { children: JSX.Element }) => {
   return children;
 };
 
-// Компонент для страниц авторизации (редирект на главную если уже залогинен)
 const AuthRoute = ({ children }: { children: JSX.Element }) => {
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
 
@@ -63,7 +75,23 @@ const AuthRoute = ({ children }: { children: JSX.Element }) => {
 
 export const AppRouter = () => {
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
-  console.log("isAuthenticated: " + isAuthenticated);
+  const { pathname } = useLocation();
+
+  useEffect((): void => {
+    const isAvalible =
+      pathname === "/sign-in" || pathname === "/sign-up" ? true : false;
+
+    console.log("isAuthenticated: " + isAuthenticated);
+
+    if (!isAuthenticated && !isAvalible) {
+      <Navigate to={"/sign-in"} />;
+      return;
+    }
+
+    
+
+    return;
+  }, []);
 
   return (
     <Routes>
