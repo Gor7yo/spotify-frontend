@@ -1,4 +1,4 @@
-import { useState, type JSX } from "react";
+import { type JSX } from "react";
 import style from "./NavMenuSide.module.css";
 import { Link, useLocation } from "react-router";
 import { FiSearch } from "react-icons/fi";
@@ -10,8 +10,7 @@ import { FaHeart } from "react-icons/fa";
 
 export const NavMenuSide = (): JSX.Element => {
   const { pathname } = useLocation();
-  const path = pathname.slice(1, pathname.length).toLowerCase();
-  const [activeNav, setActiveNav] = useState(path);
+  const activeNav = pathname.slice(1, pathname.length).toLowerCase();
 
   return (
     <div className={style.NavMenuSide}>
