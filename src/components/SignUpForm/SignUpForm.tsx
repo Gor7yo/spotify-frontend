@@ -35,11 +35,11 @@ export const SignUpForm = (): JSX.Element => {
   return (
     <form className={style.SignUp__form} onSubmit={handleSubmit(onSubmit)}>
       <div className={`${style.form__email} ${style.form__input}`}>
-        <span className={`${style.form__span}`}>Email address or username</span>
+        <span className={`${style.form__span}`}>Email address</span>
         <input
           type="email"
           {...register("email", { required: true })}
-          placeholder="Email address or username"
+          placeholder="Email address"
         />
 
         {errors.email && (

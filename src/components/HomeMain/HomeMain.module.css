@@ -1,0 +1,130 @@
+.prevLoading {
+  width: 68px;
+  height: 68px;
+  background: var(--primary-spotify-green);
+  display: inline-block;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: animloader 1s ease-in infinite;
+  position: absolute;
+  top: 45%;
+  left: 55%;
+  opacity: 0.7;
+}
+
+.prevLoading__nextPage {
+  width: 68px;
+  height: 68px;
+  background: var(--primary-spotify-green);
+  display: inline-block;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: animloader 1s ease-in infinite;
+  opacity: 0.7;
+}
+
+.HomeMain {
+  display: flex;
+  width: 100%;
+  padding: 20px 40px 0 40px;
+  overflow-y: auto;
+}
+
+.tracks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+	padding-bottom: 20px;
+  align-items: start;
+  width: 100%;
+  align-content: start;
+  gap: 40px;
+}
+
+.track {
+  display: flex;
+  background-color: #000000b4;
+  width: 100%;
+  padding: 14px 20px 15px 30px;
+  height: 90px;
+  color: #ffffff;
+  border-radius: 32px;
+}
+
+.track__info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.info__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  max-width: 190px;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.info__artist {
+  font-size: 13px;
+  color: var(--primaty-gray-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 140px;
+  display: block;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.trackActions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.trackActions__playBtn {
+	cursor: pointer;
+}
+
+.playBtn__btn {
+  font-size: 18px;
+}
+
+.notStreamable {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.nextPage {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.nextPage__btn {
+  width: 40%;
+  min-height: 50px;
+  background-color: var(--primary-spotify-green);
+  border-radius: 32px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: var(--primaty-gray-text);
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+@keyframes animloader {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 0;
+  }
+}

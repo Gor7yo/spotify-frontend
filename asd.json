@@ -1,0 +1,173 @@
+{
+  "toptracks": {
+    "track": [
+      {
+        "name": "Hung Up",
+        "playcount": "16475560",
+        "listeners": "1654508",
+        "mbid": "03e2d973-96a7-48a0-9a38-1ae377971c55",
+        "url": "https://www.last.fm/music/Madonna/_/Hung+Up",
+        "streamable": "0",
+        "artist": {
+          "name": "Madonna",
+          "mbid": "79239441-bfd5-4981-a70c-55c3f15c1287",
+          "url": "https://www.last.fm/music/Madonna"
+        },
+        "image": [
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "large"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "extralarge"
+          }
+        ],
+        "@attr": { "rank": "1" }
+      },
+      {
+        "name": "Like a Prayer",
+        "playcount": "12382683",
+        "listeners": "1520407",
+        "mbid": "06821010-ec27-4c03-aafd-93c336839daa",
+        "url": "https://www.last.fm/music/Madonna/_/Like+a+Prayer",
+        "streamable": "0",
+        "artist": {
+          "name": "Madonna",
+          "mbid": "79239441-bfd5-4981-a70c-55c3f15c1287",
+          "url": "https://www.last.fm/music/Madonna"
+        },
+        "image": [
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "large"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "extralarge"
+          }
+        ],
+        "@attr": { "rank": "2" }
+      },
+      {
+        "name": "Material Girl",
+        "playcount": "8802197",
+        "listeners": "1408037",
+        "mbid": "006cad5f-4326-4f4a-8c72-70d50106b584",
+        "url": "https://www.last.fm/music/Madonna/_/Material+Girl",
+        "streamable": "0",
+        "artist": {
+          "name": "Madonna",
+          "mbid": "79239441-bfd5-4981-a70c-55c3f15c1287",
+          "url": "https://www.last.fm/music/Madonna"
+        },
+        "image": [
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "large"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "extralarge"
+          }
+        ],
+        "@attr": { "rank": "3" }
+      },
+      {
+        "name": "Like a Virgin",
+        "playcount": "6931142",
+        "listeners": "1111481",
+        "mbid": "029de8fa-700d-4eff-a127-75862842e4fc",
+        "url": "https://www.last.fm/music/Madonna/_/Like+a+Virgin",
+        "streamable": "0",
+        "artist": {
+          "name": "Madonna",
+          "mbid": "79239441-bfd5-4981-a70c-55c3f15c1287",
+          "url": "https://www.last.fm/music/Madonna"
+        },
+        "image": [
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "large"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "extralarge"
+          }
+        ],
+        "@attr": { "rank": "4" }
+      },
+      {
+        "name": "La Isla Bonita",
+        "playcount": "8024678",
+        "listeners": "1102001",
+        "mbid": "0cb6d5bf-13a9-377c-bec1-eed3a111c3f1",
+        "url": "https://www.last.fm/music/Madonna/_/La+Isla+Bonita",
+        "streamable": "0",
+        "artist": {
+          "name": "Madonna",
+          "mbid": "79239441-bfd5-4981-a70c-55c3f15c1287",
+          "url": "https://www.last.fm/music/Madonna"
+        },
+        "image": [
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "large"
+          },
+          {
+            "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
+            "size": "extralarge"
+          }
+        ],
+        "@attr": { "rank": "5" }
+      }
+    ],
+    "@attr": {
+      "artist": "Madonna",
+      "page": "1",
+      "perPage": "5",
+      "totalPages": "96556",
+      "total": "482776"
+    }
+  }
+}

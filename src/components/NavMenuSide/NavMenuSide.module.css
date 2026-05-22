@@ -68,8 +68,28 @@
   height: 24px;
 }
 
-.NavMenuSide__langSwap {
+.NavMenuSide__profile {
   margin: auto 0 0 0;
+  padding: 0 0 32px 24px;
+  color: #fff;
+}
+
+.profile__action {
+  cursor: pointer;
+  font-size: 2.5rem;
+  overflow: hidden;
+  padding-top: 10px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eee;
+}
+
+.NavMenuSide__langSwap {
+  margin: 0 0 0 0;
   padding: 0 0 32px 24px;
   color: #fff;
   width: 141px;

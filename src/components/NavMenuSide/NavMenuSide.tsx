@@ -1,3 +1,5 @@
+import { IoPerson } from "react-icons/io5";
+
 import { type JSX } from "react";
 import style from "./NavMenuSide.module.css";
 import { Link, useLocation } from "react-router";
@@ -62,6 +64,12 @@ export const NavMenuSide = (): JSX.Element => {
         >
           <FaHeart className={style.likedSongs__icon} />
           <span className={style.action__span}>Liked Songs</span>
+        </Link>
+      </div>
+
+      <div className={style.NavMenuSide__profile}>
+        <Link to={'/profile'} className={style.profile__action}>
+          <IoPerson className={style.profile__icon} />
         </Link>
       </div>
 

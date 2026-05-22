@@ -5,7 +5,7 @@ import { persist } from "zustand/middleware";
 interface User {
   id: number;
   email: string;
-  name?: string;
+  username: string;
 }
 
 interface AuthStore {
@@ -16,7 +16,7 @@ interface AuthStore {
   setAuth: (accessToken: string, user: User) => void;
   logout: () => void;
   updateUser: (user: User) => void;
-  hydrate: () => void; // ← Добавляем метод гидратации
+  hydrate: () => void;
 }
 
 export const useAuthStore = create<AuthStore>()(
@@ -42,7 +42,6 @@ export const useAuthStore = create<AuthStore>()(
 
       updateUser: (user) => set({ user }),
 
-      // Метод для восстановления isAuthenticated после гидратации
       hydrate: () => {
         const { accessToken } = get();
         set({ isAuthenticated: !!accessToken });
@@ -54,7 +53,7 @@ export const useAuthStore = create<AuthStore>()(
         accessToken: state.accessToken,
         user: state.user,
       }),
-      // Добавляем обработчик после гидратации
+      
       onRehydrateStorage: () => (state) => {
         if (state) {
           state.hydrate();

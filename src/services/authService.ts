@@ -1,5 +1,12 @@
 import { apiClient } from "../api/axiosInstance";
 
+export const Role = {
+  ADMIN: "ADMIN",
+  USER: "USER",
+} as const;
+
+export type Role = (typeof Role)[keyof typeof Role];
+
 interface LoginCredentials {
   email: string;
   password: string;
@@ -8,11 +15,6 @@ interface LoginCredentials {
 
 interface AuthResponse {
   accessToken: string;
-  user: {
-    id: number;
-    email: string;
-    name?: string;
-  };
 }
 
 interface RefreshTokenResponse {
@@ -22,7 +24,8 @@ interface RefreshTokenResponse {
 interface User {
   id: number;
   email: string;
-  name?: string;
+  username: string;
+  role: Role;
 }
 
 export const authService = {
@@ -31,6 +34,7 @@ export const authService = {
       email,
       password,
     });
+
     return data;
   },
 

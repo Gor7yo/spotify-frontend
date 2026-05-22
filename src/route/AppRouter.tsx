@@ -5,6 +5,7 @@ import { SignIn } from "../pages/SignIn/SignIn";
 import { useAuthStore } from "../store/authStore";
 import { useEffect, type JSX } from "react";
 import { Search } from "../pages/Search/Search";
+import { Profile } from "../pages/Profile/Profile";
 
 const routes = [
   {
@@ -32,7 +33,7 @@ const routes = [
   },
   {
     path: "/profile",
-    element: <div>Profile</div>,
+    element: <Profile />,
     isPrivate: true,
     title: "Profile",
     name: "profile",

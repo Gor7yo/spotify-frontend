@@ -22,7 +22,9 @@
 a,
 button {
   text-decoration: none;
-  color: white;
   text-transform: none;
+  cursor: pointer;
+  color: white;
+  background: none;
   border: none;
 }

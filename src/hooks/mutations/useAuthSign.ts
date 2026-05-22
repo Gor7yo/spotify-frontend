@@ -6,7 +6,7 @@ import {
 } from "@tanstack/react-query";
 import { useEffect } from "react";
 import { useAuthStore } from "../../store/authStore";
-import { authService } from "../../services/authService";
+import { authService, Role } from "../../services/authService";
 
 interface SignInData {
   email: string;
@@ -21,21 +21,17 @@ interface SignUpData {
 
 interface AuthResponse {
   accessToken: string;
-  user: {
-    id: number;
-    email: string;
-    name?: string;
-  };
 }
 
 interface User {
   id: number;
   email: string;
-  name?: string;
+  username: string;
+  role: Role;
 }
 
 interface AuthStoreState {
-  setAuth: (accessToken: string, user: User) => void;
+  setAuth: (accessToken: string) => void;
   logout: () => void;
   updateUser: (user: User) => void;
   accessToken: string | null;
@@ -52,11 +48,11 @@ export const useAuthSign = () => {
     useMutation({
       mutationFn: ({ email, password }) => authService.login(email, password),
       onSuccess: (data) => {
-        setAuth(data.accessToken, data.user);
+        setAuth(data.accessToken);
         navigate("/", { replace: true });
       },
       onError: (error) => {
-        console.error("Login failed: ", error.message);
+        console.error(error);
       },
     });
 
@@ -64,7 +60,7 @@ export const useAuthSign = () => {
     useMutation({
       mutationFn: (userData) => authService.register(userData),
       onSuccess: (data) => {
-        setAuth(data.accessToken, data.user);
+        setAuth(data.accessToken);
         navigate("/", { replace: true });
       },
     });
@@ -80,11 +76,19 @@ export const useAuthSign = () => {
     }
   };
 
-  const { data: userData, isFetching: isFetchingMe } = useQuery({
+  const accessToken = useAuthStore((state) => state.accessToken);
+  const user = useAuthStore((state) => state.user);
+
+  const {
+    data: userData,
+    isFetching: isFetchingMe,
+    refetch: refetchMe,
+  } = useQuery({
     queryKey: ["me"],
     queryFn: () => authService.getMe(),
-    enabled: !!useAuthStore.getState().accessToken && !useAuthStore.getState().user,
+    enabled: !!accessToken && !user,
     retry: false,
+    staleTime: 5 * 60 * 1000,
   });
 
   useEffect(() => {
@@ -92,6 +96,21 @@ export const useAuthSign = () => {
       updateUser(userData);
     }
   }, [userData, updateUser]);
+
+  useEffect(() => {
+    const validateToken = async () => {
+      if (accessToken && !user) {
+        try {
+          await refetchMe();
+        } catch (error) {
+          console.error("Token validation failed:", error);
+          storeLogout();
+        }
+      }
+    };
+
+    validateToken();
+  }, []);
 
   return {
     signIn: signInMutation.mutateAsync,
@@ -104,9 +123,10 @@ export const useAuthSign = () => {
 
     logout,
     isFetchingMe,
+    refetchMe,
 
     user: useAuthStore((state) => state.user),
-    token: useAuthStore((state) => state.accessToken),
+    token: accessToken,
     isAuthenticated: useAuthStore((state) => state.isAuthenticated),
   };
 };

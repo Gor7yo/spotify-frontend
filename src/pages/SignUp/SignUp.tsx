@@ -40,9 +40,9 @@ export const SignUp = (): JSX.Element => {
         <SignUpForm />
 
         <div className={style.SignUp__signIn}>
-          <span className={style.signUp__span}>Don't have an account?</span>
-          <Link to={"/sign-up"} className={style.signUp_btn}>
-            Sign up for Spotify
+          <span className={style.signUp__span}>Already have an account?</span>
+          <Link to={"/sign-in"} className={style.signUp_btn}>
+            Sign in for Spotify
           </Link>
         </div>
       </main>

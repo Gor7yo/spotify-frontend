@@ -34,11 +34,11 @@ export const SignInForm = (): JSX.Element => {
   return (
     <form className={style.SignIn__form} onSubmit={handleSubmit(onSubmit)}>
       <div className={`${style.form__email} ${style.form__input}`}>
-        <span className={`${style.form__span}`}>Email address or username</span>
+        <span className={`${style.form__span}`}>Email address</span>
         <input
           type="email"
           {...register("email", { required: true })}
-          placeholder="Email address or username"
+          placeholder="Email address"
         />
 
         {errors.email && (
@@ -71,7 +71,7 @@ export const SignInForm = (): JSX.Element => {
         )}
       </div>
 
-			{signInError && (
+      {signInError && (
         <div className={style.form__error}>
           {signInError.message || "Login failed. Please try again."}
         </div>
