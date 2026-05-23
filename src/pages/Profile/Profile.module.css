@@ -1,10 +1,78 @@
-.Profile { 
-	display: flex;
-	width: 100%;
-	height: 100%;
+.Profile {
+  display: flex;
+  background-color: var(--bg-color-dark);
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .Profile__user {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px 0 40px 80px;
+}
+
+.user__topInfo {
+  display: flex;
+  padding: 20px 0 0 0;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 60px;
+}
+
+.info__avatar {
+  display: flex;
+  width: 84px;
+  height: 84px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bolder;
+  font-size: 34px;
+  background: linear-gradient(
+    45deg,
+    var(--primary-spotify-green),
+    var(--light-gray-text)
+  );
+}
+
+.info__username {
+  color: var(--primary-spotify-green);
+  font-size: 36px;
+}
+
+.user__bottomInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.info__email {
+  display: flex;
+  gap: 10px;
+}
+
+.email__span {
+  font-size: 24px;
+  color: var(--primary-spotify-green);
+}
+
+.email {
+  color: var(--over-light-text);
+  font-size: 24px;
+}
+
+.logoutBtn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	padding: 20px;
+  width: 200px;
+	right: 80px;
+	bottom: 80px;
+	border-radius: 24px;
+	font-size: 18px;
+	background-color: #a54646;
 }

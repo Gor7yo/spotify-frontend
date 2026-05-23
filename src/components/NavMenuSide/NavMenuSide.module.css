@@ -1,7 +1,6 @@
 .NavMenuSide {
   background-color: #000;
   height: 100%;
-  width: 15rem;
   overflow-y: auto;
   display: flex;
   flex-direction: column;

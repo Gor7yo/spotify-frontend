@@ -4,7 +4,7 @@ import { useAuthSign } from "../../hooks/mutations/useAuthSign";
 import style from "./Profile.module.css";
 
 export const Profile = (): JSX.Element => {
-  const { user, isFetchingMe, refetchMe } = useAuthSign();
+  const { user, isFetchingMe, refetchMe, logout } = useAuthSign();
 
   useEffect(() => {
     if (!user && !isFetchingMe) {
@@ -30,13 +30,32 @@ export const Profile = (): JSX.Element => {
     );
   }
 
+  const handleLogout = () => {
+    logout();
+    return;
+  };
+
   return (
     <div className={style.Profile}>
       <NavMenuSide />
       <div className={style.Profile__user}>
-        <span>{user.id}</span>
-        <span>{user.email}</span>
-        <span>{user.username}</span>
+        <div className={style.user__topInfo}>
+          <div className={style.info__avatar}>{user.username.charAt(0)}</div>
+          <h2 className={style.info__username}>{user.username}</h2>
+        </div>
+
+        <div className={style.user__bottomInfo}>
+          <div className={style.info__email}>
+            <span className={style.email__span}>Email: </span>
+            <p className={style.email}>{user.email}</p>
+          </div>
+
+          <div className={style.info__description}>More info</div>
+        </div>
+
+        <button className={style.logoutBtn} onClick={() => handleLogout()}>
+          Logout
+        </button>
       </div>
     </div>
   );
